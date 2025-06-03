@@ -1,0 +1,7 @@
+CREATE TABLE todos (
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    task VARCHAR(255) NOT NULL,
+    deadline DATE,
+    category VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

@@ -11,7 +11,6 @@
                 <th>タスク</th>
                 <th>締切日</th>
                 <th>カテゴリー</th>
-                <th>日時</th>
                 <th></th>
             </tr>
         </thead>
@@ -19,9 +18,8 @@
             <tr th:each="todo : ${todos}">
                 <td><span th:text="${todo.id}">id</span></td>
                 <td><span th:text="${todo.task}">task</span></td>
-                <td><span th:text="${todo.deadine}">deadine</span></td>
+                <td><span th:text="${todo.deadline}">deadline</span></td>
                 <td><span th:text="${todo.category}">category</span></td>
-                <td><span th:text="${todo.createdAt}">createdAt</span></td>
             </tr>
         </tbody>
     </table>

@@ -26,5 +26,20 @@ public class TodoService {
         todoRepository.insertTodo(todo);
     }
 
+    public void deleteTodo(long id){
+        todoRepository.deleteTodo(id);
+    }
+
+    public Todo getTodoById(long id){
+        return todoRepository.getTodoById(id);
+    }
+
+    public void updateTodo(long id, Todo todo){
+        if (id != todo.getId()){
+            throw new IllegalArgumentException("Todo ID does not match");
+        }
+        todoRepository.updateTodo(todo);
+    }
+
     
 }

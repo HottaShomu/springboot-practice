@@ -8,6 +8,10 @@
     <div th:fragment="header">
         <header style="background-color: #FF0000;">
             <h4>ToDoリスト</h4>
+            <ul>
+                <li><a th:href="@{/todos}">タスク一覧</a></li>
+                <li><a th:href="@{/todos/new}">タスク登録</a></li>
+            </ul>
         </header>
     </div>
 

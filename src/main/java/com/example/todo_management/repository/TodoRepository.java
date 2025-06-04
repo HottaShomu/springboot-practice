@@ -17,4 +17,8 @@ public class TodoRepository {
     public List<Todo> getAllTodos(){
         return todoMapper.selectAllTodos();
     }
+    
+    public void insertTodo(Todo todo){
+        todoMapper.insertTodo(todo);
+    }
 }

@@ -7,7 +7,6 @@
     <table>
         <thead>
             <tr>
-                <th>ID</th>
                 <th>タスク</th>
                 <th>締切日</th>
                 <th>カテゴリー</th>
@@ -16,11 +15,17 @@
         </thead>
         <tbody>
             <tr th:each="todo : ${todos}">
-                <td><span th:text="${todo.id}">id</span></td>
                 <td><span th:text="${todo.task}">task</span></td>
                 <td><span th:text="${todo.deadline}">deadline</span></td>
                 <td><span th:text="${todo.category}">category</span></td>
-            <!--    <td><span th:text="${todo.createdAt}">createdAt</span></td>   -->
+                <td>
+                    <form th:action="@{/todos/{id}/edit(id=${todo.id})}" method="get">
+                        <button type="submit">編集</button>
+                    </form>
+                    <form th:action="@{/todos/{id}/delete(id=${todo.id})}" method="post">
+                        <button type="submit">完了</button>
+                    </form>
+                </td>
             </tr>
         </tbody>
     </table>

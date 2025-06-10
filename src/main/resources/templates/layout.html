@@ -11,6 +11,7 @@
             <ul>
                 <li sec:authorize="isAuthenticated()"><a th:href="@{/todos}">タスク一覧</a></li>
                 <li sec:authorize="isAuthenticated()"><a th:href="@{/todos/new}">タスク登録</a></li>
+                <li sec:authorize="isAnonymous()"><a th:href="@{/register}">新規登録</a></li>
                 <!-- <li sec:authorize="isAuthenticated()"><a th:href="@{/}">完了タスク一覧</a></li> -->
                 <li sec:authorize="isAuthenticated()">
                     <form th:action="@{/logout}" method="post">

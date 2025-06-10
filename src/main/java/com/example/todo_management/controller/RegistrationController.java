@@ -1,5 +1,7 @@
 package com.example.todo_management.controller;
 
+import com.example.todo_management.form.UserForm;
+import com.example.todo_management.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +18,7 @@ public class RegistrationController {
     @GetMapping("/register")
     public String showRegistrationForm(Model model){
         model.addAttribute("userForm", new UserForm());
-        return "register"
+        return "register";
     }
 
     @PostMapping("/register")

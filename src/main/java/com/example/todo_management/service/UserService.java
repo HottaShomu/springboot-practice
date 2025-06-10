@@ -16,7 +16,7 @@ public class UserService {
         this.passwordEncoder = passwordEncoder;
     }
 
-    public void createUser(UserFrom userform) {
+    public void createUser(UserForm userform) {
         User user = new User();
         user.setUsername(userFrom.getUsername());
 

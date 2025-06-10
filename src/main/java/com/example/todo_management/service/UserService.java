@@ -18,7 +18,7 @@ public class UserService {
 
     public void createUser(UserForm userform) {
         User user = new User();
-        user.setUsername(userFrom.getUsername());
+        user.setUsername(userForm.getUsername());
 
         String hashedPassword = passwordEncoder.encode(userForm.getPassword());
         user.setPassword(hashedPassword);

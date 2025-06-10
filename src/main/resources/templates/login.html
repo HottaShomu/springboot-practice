@@ -21,7 +21,7 @@
         <button type="submit">ログイン</button>
     </form>
     <form th:action="@{/register}" method="post">
-        <button type="submit">ユーザ登録</button>
+        <a th:href="register.html"><button type="submit">新規登録</button></a>
     </form>
     <div th:replace="~{layout :: footer}"></div>
 </body>

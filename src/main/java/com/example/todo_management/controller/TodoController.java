@@ -49,10 +49,11 @@ public class TodoController {
     @PostMapping("/{id}/delete")
     public String deleteTodo(@PathVariable long id){
         todoService.deleteTodo(id);
+        todoService.changeFlag(false);
         return "redirect:/todos";
     }
 
-    @GetMapping("/{id}/edit")
+    @PostMapping("/{id}/edit")
     public String editTodo(@PathVariable long id, Model model){
         Todo todo = todoService.getTodoById(id);
         model.addAttribute("todo", todo);

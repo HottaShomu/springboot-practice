@@ -26,9 +26,9 @@ public class TodoService {
         todoRepository.insertTodo(todo);
     }
 
-    /*public void deleteTodo(long id){
+    public void deleteTodo(long id){
         todoRepository.deleteTodo(id);
-    }*/
+    }
 
     public Todo getTodoById(long id){
         return todoRepository.getTodoById(id);

@@ -28,6 +28,13 @@ public class TodoController {
         return "todo/todo-list";
     }
 
+    @GetMapping("/Done")
+    public String Dones(Model model){
+        List<Todo> todos = todoService.getAllTodos();
+        model.addAttribute("todos", todos);
+        return "done/done-list";
+    }
+
     @GetMapping("/new")
     public String todoForm(Model model){
         TodoForm todoForm = new TodoForm();

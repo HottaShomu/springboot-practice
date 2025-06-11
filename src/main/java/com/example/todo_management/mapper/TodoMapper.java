@@ -28,4 +28,7 @@ public interface TodoMapper {
 
     @Select("SELECT * FROM todos WHERE id = #{id}")
     Todo selectTodoById(long id);
+
+    @Update("UPDATE todos SET isTodoflag = #{isTodoflag} WHERE id = #{id}")
+    void updateFlag(boolean isTodoflag);
 }

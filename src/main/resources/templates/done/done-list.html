@@ -18,6 +18,14 @@
                 <td><span th:text="${todo.task}">task</span></td>
                 <td><span th:text="${todo.deadline}">deadline</span></td>
                 <td><span th:text="${todo.category}">category</span></td>
+                <td>
+                    <form th:action="@{/todos/{id}/delete(id=${todo.id})}" method="post">
+                        <button type="submit">削除</button>
+                    </form>
+                    <form th:action="@{/todos/{id}/change/false(id=${todo.id}, isTodoflag=${todo.isTodoflag})}" method="post">
+                        <button type="submit">戻す</button>
+                    </form>
+                </td>
             </tr>
         </tbody>
     </table>

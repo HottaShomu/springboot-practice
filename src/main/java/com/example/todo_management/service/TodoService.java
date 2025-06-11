@@ -47,5 +47,7 @@ public class TodoService {
         } else {
             isTodoflag = !isTodoflag;
         }
+
+        todoRepository.updateFlag(isTodoflag);
     }
 }

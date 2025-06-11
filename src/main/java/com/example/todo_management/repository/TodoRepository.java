@@ -22,9 +22,9 @@ public class TodoRepository {
         todoMapper.insertTodo(todo);
     }
 
-    public void deleteTodo(long id) {
+    /*public void deleteTodo(long id) {
         todoMapper.deleteTodoById(id);
-    }
+    }*/
 
     public Todo getTodoById(long id){
         return todoMapper.selectTodoById(id);
@@ -34,7 +34,7 @@ public class TodoRepository {
         todoMapper.updateTodo(todo);
     }
 
-    public void updateFlag(boolean isTodoflag){
-        todoMapper.updateFlag(isTodoflag);
+    public void updateFlag(boolean isTodoflag, long id){
+        todoMapper.updateFlag(isTodoflag, id);
     }
 }

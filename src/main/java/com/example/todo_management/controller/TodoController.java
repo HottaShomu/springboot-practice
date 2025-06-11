@@ -22,10 +22,9 @@ public class TodoController {
     }
 
     @GetMapping
-    public String todos(boolean isTodoflag, Model model) {
-        List<Todo> todos = todoService.getAllTodos(isTodoflag);
+    public String todos(Model model) {
+        List<Todo> todos = todoService.getAllTodos();
         model.addAttribute("todos", todos);
-        model.addAttribute("flag", isTodoflag);
         return "todo/todo-list";
     }
 
@@ -53,7 +52,7 @@ public class TodoController {
         return "redirect:/todos";
     }
 
-    @PostMapping("/{id}/edit")
+    @GetMapping("/{id}/edit")
     public String editTodo(@PathVariable long id, Model model){
         Todo todo = todoService.getTodoById(id);
         model.addAttribute("todo", todo);

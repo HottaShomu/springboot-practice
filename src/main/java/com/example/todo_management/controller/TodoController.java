@@ -22,9 +22,10 @@ public class TodoController {
     }
 
     @GetMapping
-    public String todos(Model model) {
+    public String todos(boolean isTodoflag, Model model) {
         List<Todo> todos = todoService.getAllTodos();
         model.addAttribute("todos", todos);
+        model.addAttribute("flag", isTodoflag);
         return "todo/todo-list";
     }
 

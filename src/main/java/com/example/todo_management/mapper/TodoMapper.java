@@ -13,8 +13,8 @@ import java.util.List;
 @Mapper
 public interface TodoMapper {
 
-    @Select("SELECT * FROM todos")
-    List<Todo> selectAllTodos();
+    @Select("SELECT * FROM todos WHERE isTodoflag = #{isTodoflag}")
+    List<Todo> selectAllTodos(boolean isTodoflag);
 
     @Insert("INSERT INTO todos (task, deadline, category) VALUES (#{task}, #{deadline}, #{category})")
     @Options(useGeneratedKeys = true, keyProperty = "id")

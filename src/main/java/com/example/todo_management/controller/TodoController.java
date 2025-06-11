@@ -54,7 +54,7 @@ public class TodoController {
 
     @PostMapping("/{id}/delete/{isTodoflag}")
     public String changeFlag(@PathVariable long id, @PathVariable boolean isTodoflag){
-        todoService.changeFlag(isTodoflag);
+        todoService.changeFlag(isTodoflag, id);
         return "redirect:/todos";
     }
 

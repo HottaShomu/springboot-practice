@@ -34,7 +34,7 @@ public class TodoRepository {
         todoMapper.updateTodo(todo);
     }
 
-    public void updateFlag(boolean isTodoflag){
-        todoMapper.updateFlag(isTodoflag);
+    public void updateFlag(boolean isTodoflag, long id){
+        todoMapper.updateFlag(isTodoflag, id);
     }
 }

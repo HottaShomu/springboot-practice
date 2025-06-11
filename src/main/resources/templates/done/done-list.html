@@ -22,7 +22,7 @@
                     <form th:action="@{/todos/{id}/delete(id=${todo.id})}" method="post">
                         <button type="submit">削除</button>
                     </form>
-                    <form th:action="@{/todos/{id}/change/false(id=${todo.id}, isTodoflag=${todo.isTodoflag})}" method="post">
+                    <form th:action="@{/todos/{id}/change2/true(id=${todo.id}, isTodoflag=${todo.isTodoflag})}" method="post">
                         <button type="submit">戻す</button>
                     </form>
                 </td>

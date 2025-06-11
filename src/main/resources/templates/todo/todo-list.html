@@ -14,20 +14,18 @@
             </tr>
         </thead>
         <tbody>
-            <tr th:each="todo : ${todos}">
-                <form th:unless="${todo.isTodoflag}" th:action="@{/todos}" method="post">
-                    <td><span th:text="${todo.task}">task</span></td>
-                    <td><span th:text="${todo.deadline}">deadline</span></td>
-                    <td><span th:text="${todo.category}">category</span></td>
-                    <td>
-                        <form th:action="@{/todos/{id}/edit(id=${todo.id})}" method="get">
-                            <button type="submit">編集</button>
-                        </form>
-                        <form th:action="@{/todos/{id}/delete(id=${todo.id})}" method="post">
-                            <button type="submit">完了</button>
-                        </form>
-                    </td>
-                </form>
+            <tr th:each="todo : ${todos}" th:unless="${todo.isTodoflag}">
+                <td><span th:text="${todo.task}">task</span></td>
+                <td><span th:text="${todo.deadline}">deadline</span></td>
+                <td><span th:text="${todo.category}">category</span></td>
+                <td>
+                    <form th:action="@{/todos/{id}/edit(id=${todo.id})}" method="get">
+                        <button type="submit">編集</button>
+                    </form>
+                    <form th:action="@{/todos/{id}/delete(id=${todo.id})}" method="post">
+                        <button type="submit">完了</button>
+                    </form>
+                </td>
             </tr>
         </tbody>
     </table>

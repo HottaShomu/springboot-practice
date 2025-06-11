@@ -14,4 +14,5 @@ public class Todo {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate deadline;
     private LocalDateTime createdAt;
+    private boolean isTodoflag;
 }

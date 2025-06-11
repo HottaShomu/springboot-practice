@@ -41,13 +41,13 @@ public class TodoService {
         todoRepository.updateTodo(todo);
     }
 
-    public void changeFlag(boolean isTodoflag) {
+    public void changeFlag(boolean isTodoflag, long id) {
         Todo todo = new Todo();
         if (todo.isTodoflag() == false) {
             isTodoflag = !isTodoflag;
         }else if(todo.isTodoflag() == true){
              isTodoflag = !isTodoflag;
         }
-        todoRepository.updateFlag(isTodoflag);
+        todoRepository.updateFlag(isTodoflag, id);
     }
 }

@@ -14,8 +14,8 @@ public class TodoService {
         this.todoRepository = todoRepository;
     }
 
-    public List<Todo> getAllTodos(){
-        return todoRepository.getAllTodos();
+    public List<Todo> getAllTodos(boolean flag){
+        return todoRepository.getAllTodos(flag);
     }
 
     public void createTodo(TodoForm todoForm){
@@ -41,5 +41,11 @@ public class TodoService {
         todoRepository.updateTodo(todo);
     }
 
-    
+    public void changeFlag(boolean isTodoflag) {
+        if (isTodoflag == true) {
+            isTodoflag = !isTodoflag;
+        } else {
+            isTodoflag = !isTodoflag;
+        }
+    }
 }

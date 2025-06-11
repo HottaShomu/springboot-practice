@@ -14,8 +14,8 @@ public class TodoService {
         this.todoRepository = todoRepository;
     }
 
-    public List<Todo> getAllTodos(boolean flag){
-        return todoRepository.getAllTodos(flag);
+    public List<Todo> getAllTodos(){
+        return todoRepository.getAllTodos();
     }
 
     public void createTodo(TodoForm todoForm){

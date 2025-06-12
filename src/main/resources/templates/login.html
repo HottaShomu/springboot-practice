@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja" xmlns:th="http://www.thymeleaf.org">
+    <link rel="stylesheet" th:href="@{/css/loginStyle.css}" />
 <head th:replace="~{layout :: head(ログイン)}"></head>
 <body>
     <div th:replace="~{layout :: header}"></div>
@@ -11,8 +12,8 @@
     </div>
     <form th:action="@{/login}" method="post">
         <div>
-            <label for="username">ユーザ名：</label>
-            <input type="text" id="username" name="username">
+            <label for="username" class="username">ユーザ名：</label>
+            <input type="text" id="username" name="username" class="nameform">
         </div>
         <div>
             <label for="password">パスワード：</label>

@@ -8,4 +8,6 @@ public class TodoForm{
     private String task;
     private String category;
     private LocalDate deadline;
+    private String place;
+    private String memo;
 }

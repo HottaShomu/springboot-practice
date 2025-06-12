@@ -1,16 +1,60 @@
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+}
+
 body{
-    text-align: center; 
+    text-align: center;
+    
     
 }
 
-.aaa{
-    position: absolute;
-    left: 50%; /* 親要素の中央に配置 */
-    transform: translateX(-50%); /* 中央揃えを補正 */
-    text-align: left; /* テキストを左揃え */
-    line-height: 1.6;
+/*
+.zzz{
+    position: relative;
+}
+    */
+/*
+.a1{
+   position: relative;
+   left: px;
+    
+}
+*/
+
+.a1{
+   position: relative;
+   right: 8px;
+    
 }
 
+.a2{
+    position: relative;
+    right: 24px;
+}
+
+.a3{
+    position: relative;
+    right: 39px;
+}
+
+.a4{
+    position: relative;
+    right: 0px;
+}
+
+.a5{
+    position: relative;
+    right: 0px;
+}
+
+.b1{
+    position: relative;
+    right: 0px;
+}
 
 /*
 form{

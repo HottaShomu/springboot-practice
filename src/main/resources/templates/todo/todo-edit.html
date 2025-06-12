@@ -7,15 +7,15 @@
     <form th:action="@{/todos/{id}/edit(id=${todo.id})}" th:object="${todo}" method="post">
         <div>
             <label for="task">タスク：</label>
-            <input type="text" id="task" name="task" th:filed="*{task}">
+            <input type="text" id="task" name="task" th:filed="*{task}" required>
         </div>
         <div>
             <label for="category">カテゴリー：</label>
-            <input type="text" id="category" name="category" th:filed="*{category}">
+            <input type="text" id="category" name="category" th:filed="*{category}" required>
         </div>
         <div>
             <label for="deadline">締切日：</label>
-            <input type="date" id="deadline" name="deadline" th:filed="*{deadline}">
+            <input type="date" id="deadline" name="deadline" th:filed="*{deadline}" required>
         </div>
         <div>
             <label for="place">場所：</label>

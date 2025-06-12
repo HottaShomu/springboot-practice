@@ -1,0 +1,18 @@
+body {
+    text-align: center;
+}
+
+.username {
+    position: relative;
+    left: 8px;
+}
+
+div {
+    margin: 10px;
+}
+
+button {
+    padding: 7px 15px 7px 15px;
+    margin-top: 5px;
+}
+

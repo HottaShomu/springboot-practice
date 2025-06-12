@@ -1,5 +1,19 @@
+loginStyle.css
+
+header {
+    padding: 1px;
+}
+
+li {
+    list-style-type: none;
+}
+
 body {
+    position: relative;
     text-align: center;
+    min-height: 100vh;
+    padding-bottom: 120px;
+    box-sizing: border-box;
 }
 
 .username {
@@ -14,5 +28,13 @@ div {
 button {
     padding: 7px 15px 7px 15px;
     margin-top: 5px;
+    border: 1px solid #000000;
+    border-radius: 10px;
 }
 
+footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}

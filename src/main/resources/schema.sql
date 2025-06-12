@@ -1,8 +1,8 @@
 CREATE TABLE todos (
     id INTEGER AUTO_INCREMENT PRIMARY KEY,
     task VARCHAR(255) NOT NULL,
-    deadline DATE,
-    category VARCHAR(255),
+    deadline DATE NOT NULL,
+    category VARCHAR(255) NOT NULL,
     place VARCHAR(255),
     memo VARCHAR(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,

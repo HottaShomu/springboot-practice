@@ -17,6 +17,14 @@
             <label for="deadline">締切日：</label>
             <input type="date" id="deadline" name="deadline" th:filed="*{deadline}">
         </div>
+        <div>
+            <label for="place">場所：</label>
+            <input type="text" id="place" name="place" th:filed="*{place}">
+        </div>
+        <div>
+            <label for="memo">メモ：</label>
+            <input type="text" id="memo" name="memo" th:filed="*{memo}">
+        </div>
         <button type="submit">変更</button>
     </form>
     <div th:replace="~{layout :: footer}"></div>

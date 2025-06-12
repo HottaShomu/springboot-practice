@@ -16,14 +16,14 @@ public interface TodoMapper {
     @Select("SELECT * FROM todos")
     List<Todo> selectAllTodos();
 
-    @Insert("INSERT INTO todos (task, deadline, category) VALUES (#{task}, #{deadline}, #{category})")
+    @Insert("INSERT INTO todos (task, deadline, category, place, memo) VALUES (#{task}, #{deadline}, #{category}, #{place}, #{memo})")
     @Options(useGeneratedKeys = true, keyProperty = "id")
     void insertTodo(Todo todo);
 
     @Delete("DELETE FROM todos WHERE id = #{id}")
     void deleteTodoById(long id);
 
-    @Update("UPDATE todos SET task = #{task}, deadline = #{deadline}, category = #{category} WHERE id = #{id}")
+    @Update("UPDATE todos SET task = #{task}, deadline = #{deadline}, category = #{category}, place = #{place}, memo = #{memo} WHERE id = #{id}")
     void updateTodo(Todo todo);
 
     @Select("SELECT * FROM todos WHERE id = #{id}")

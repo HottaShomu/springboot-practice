@@ -13,6 +13,9 @@ public class Todo {
     private String category;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate deadline;
+    private String place;
+    private String memo;
     private LocalDateTime createdAt;
     private boolean isTodoflag;
+    
 }

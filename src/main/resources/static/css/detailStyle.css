@@ -1,7 +1,9 @@
-loginStyle.css
-
 header {
-    padding: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
 }
 
 li {
@@ -9,25 +11,19 @@ li {
 }
 
 body {
-    position: relative;
     text-align: center;
-    min-height: 100vh;
-    padding-bottom: 120px;
-    box-sizing: border-box;
+    width: 80%;
+    height: 100%;
 }
 
-.username {
-    position: relative;
-    left: 8px;
-}
-
-div {
-    margin: 10px;
+table {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 button {
+    background-color: #FFFFFF;
     padding: 7px 15px 7px 15px;
-    margin-top: 5px;
     border: 1px solid #000000;
     border-radius: 10px;
 }

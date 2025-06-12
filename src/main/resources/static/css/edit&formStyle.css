@@ -1,0 +1,19 @@
+body{
+    text-align: center; 
+    
+}
+
+.aaa{
+    position: absolute;
+    left: 50%; /* 親要素の中央に配置 */
+    transform: translateX(-50%); /* 中央揃えを補正 */
+    text-align: left; /* テキストを左揃え */
+    line-height: 1.6;
+}
+
+
+/*
+form{
+    text-align: justify;
+}
+    */

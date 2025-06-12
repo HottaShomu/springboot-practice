@@ -7,23 +7,23 @@
     <form th:action="@{/todos/new}" th:object="${todoForm}" method="post">
         <div>
             <label for="task">タスク：</label>
-            <input type="text" id="task" name="task" th:filed="*{task}">
+            <input type="text" id="task" name="task" th:field="*{task}">
         </div>
         <div>
             <label for="category">カテゴリー：</label>
-            <input type="text" id="category" name="category" th:filed="*{category}">
+            <input type="text" id="category" name="category" th:field="*{category}" required>
         </div>
         <div>
             <label for="deadline">締切日：</label>
-            <input type="date" id="deadline" name="deadline" th:filed="*{deadline}">
+            <input type="date" id="deadline" name="deadline" th:field="*{deadline}" required>
         </div>
         <div>
             <label for="place">場所：</label>
-            <input type="text" id="place" name="place" th:filed="*{place}">
+            <input type="text" id="place" name="place" th:field="*{place}" required>
         </div>
         <div>
             <label for="memo">メモ：</label>
-            <input type="text" id="memo" name="memo" th:filed="*{memo}">
+            <input type="text" id="memo" name="memo" th:field="*{memo}">
         </div>
         <button type="submit">追加</button>
     </form>

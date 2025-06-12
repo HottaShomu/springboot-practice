@@ -15,7 +15,7 @@
         </thead>
         <tbody>
             <tr th:each="todo : ${todos}" th:unless="${todo.isTodoflag}">
-                <td><span th:text="${todo.task}">task</span></td>
+                <td><a th:href="@{/todos/{id}(id=${todo.id})}"><span th:text="${todo.task}">task</span></a></td>
                 <td><span th:text="${todo.deadline}">deadline</span></td>
                 <td><span th:text="${todo.category}">category</span></td>
                 <td>

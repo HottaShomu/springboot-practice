@@ -23,6 +23,8 @@ public class TodoService {
         todo.setTask(todoForm.getTask());
         todo.setCategory(todoForm.getCategory());
         todo.setDeadline(todoForm.getDeadline());
+        todo.setPlace(todoForm.getPlace());
+        todo.setMemo(todoForm.getMemo());
         todoRepository.insertTodo(todo);
     }
 

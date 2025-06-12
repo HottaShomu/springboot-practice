@@ -15,4 +15,6 @@ public class Todo {
     private LocalDate deadline;
     private LocalDateTime createdAt;
     private boolean isTodoflag;
+    private String place;
+    private String memo;
 }

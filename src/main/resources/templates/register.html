@@ -2,27 +2,24 @@
 <html lang="ja" xmlns:th="http://www.thymeleaf.org">
     <link rel="stylesheet" th:href="@{/css/registerStyle.css}" />
 <head th:replace="~{layout :: head(ユーザ登録)}"></head>
-<body>
+<body background="/img/torii.jpg">
     <div th:replace="~{layout :: header}"></div>
     <div>
         <div th:if="${error}" th:text="${error}" style="color:red">sample message</div>
     </div>
     <form th:action="@{/register}" th:object="${userForm}" method="post">
-        <div>
+        <div class="user">
             <label for="username">ユーザ名：</label>
             <input type="text" id="username" name="username" th:field="*{username}" maxlength="10" placeholder="10文字以内" required>
         </div>
-
         <div>
             <label for="password">パスワード：</label>
             <input type="password" id="password" name="password" th:field="*{password}" minlength="8" maxlength="12" placeholder="8文字以上12文字以下" required>
         </div>
         <label for="namepass">※ユーザ名とパスワードは半角英大・小文字、数字使用可</label><br>    
-        <button type="submit">登録</button>
+        <button type="submit" class="RB">登録</button>
     </form>
-    <a href="login.html"><button type="submit">戻る</button></a>
+    <a href="login.html"><button type="submit" class="back">戻る</button></a>
     <div th:replace="~{layout :: footer}"></div>
-
-
 </body>
 </html>

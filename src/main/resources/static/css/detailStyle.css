@@ -4,14 +4,25 @@ header {
     left: 0;
     width: 20%;
     height: 100%;
+    background-color: #DC143C;
+}
+
+header button {
+    font-size: 15px;
 }
 
 h4 {
     font-size: 40px;
 }
 
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
 li {
     list-style-type: none;
+    margin-top: 30px;
 }
 
 body {
@@ -40,7 +51,7 @@ button {
     margin-top: 4px;
     border: 1px solid #000000;
     border-radius: 10px;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 footer {
@@ -49,4 +60,9 @@ footer {
     right: 0;
     bottom: 0;
     margin-top: auto;
+}
+
+.got {
+    color: #000000;
+    text-decoration: none;
 }

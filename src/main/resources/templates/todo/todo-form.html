@@ -24,9 +24,9 @@
         </div>
         <div>
             <label class="a5" for="memo">メモ：</label>
-            <input class="b5" type="text" id="memo" name="memo" th:field="*{memo}">
+            <textarea class="b5" type="text" id="memo" name="memo" th:field="*{memo}" rows="4" cols="50"></textarea>
         </div>
-        <button type="submit">追加</button>
+        <button class="ttt" type="submit">登録</button>
     </form>
     <div th:replace="~{layout :: footer}"></div>
 </body>

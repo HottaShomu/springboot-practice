@@ -17,6 +17,9 @@ body {
     padding-bottom: 120px;
     box-sizing: border-box;
     font-size: 20px;
+    background-repeat: no-repeat;
+    background-position:bottom center;
+    background-size:55%;
 }
 
 .username {

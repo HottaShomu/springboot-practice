@@ -6,6 +6,7 @@ header {
     height: 100%;
     text-align: center;
     z-index: 100;
+    background-color: rgb(210, 233, 233);
 }
 
 header button {
@@ -122,4 +123,9 @@ footer {
     bottom: 0;
     margin-top: auto;
     z-index: 200;
+}
+
+.got {
+    color: #000000;
+    text-decoration: none;
 }

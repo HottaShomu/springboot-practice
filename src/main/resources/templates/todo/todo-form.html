@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="ja" xmlns:th="http://www.thymeleaf.org">
+    <link rel="stylesheet" th:href="@{../css/edit&formStyle.css}" />
 <head th:replace="~{layout :: head(タスク一覧)}"></head>
 <body>
     <div th:replace="~{layout :: header}"></div>
     <h3>タスク登録</h3>
     <form th:action="@{/todos/new}" th:object="${todoForm}" method="post">
         <div>
-            <label for="task">タスク：</label>
-            <input type="text" id="task" name="task" th:field="*{task}">
+            <label class="a1" for="task">タスク：</label>
+            <input class="b1" type="text" id="task" name="task" th:field="*{task}">
         </div>
         <div>
-            <label for="category">カテゴリー：</label>
-            <input type="text" id="category" name="category" th:field="*{category}" required>
+            <label class="a2" for="category">カテゴリー：</label>
+            <input class="b2" type="text" id="category" name="category" th:field="*{category}" required>
         </div>
         <div>
-            <label for="deadline">締切日：</label>
-            <input type="date" id="deadline" name="deadline" th:field="*{deadline}" required>
+            <label class="a3" for="deadline">締切日：</label>
+            <input class="b3" type="date" id="deadline" name="deadline" th:field="*{deadline}" required>
         </div>
         <div>
-            <label for="place">場所：</label>
-            <input type="text" id="place" name="place" th:field="*{place}" required>
+            <label class="a4" for="place">場所：</label>
+            <input class="b4" type="text" id="place" name="place" th:field="*{place}" required>
         </div>
         <div>
-            <label for="memo">メモ：</label>
-            <input type="text" id="memo" name="memo" th:field="*{memo}">
+            <label class="a5" for="memo">メモ：</label>
+            <input class="b5" type="text" id="memo" name="memo" th:field="*{memo}">
         </div>
         <button type="submit">追加</button>
     </form>

@@ -7,24 +7,24 @@
     <h3>タスク編集</h3>
     <form th:action="@{/todos/{id}/edit(id=${todo.id})}" th:object="${todo}" method="post">
         <div class>
-            <label for="task">タスク：</label>
-            <input type="text" id="task" name="task" th:field="*{task}" required>
+            <label class="a1" for="task">タスク：</label>
+            <input class="b1" type="text" id="task" name="task" th:field="*{task}" required>
         </div>
         <div class>
-            <label for="category">カテゴリー：</label>
-            <input type="text" id="category" name="category" th:field="*{category}" required>
+            <label class="a1" for="category">カテゴリー：</label>
+            <input class="b1" type="text" id="category" name="category" th:field="*{category}" required>
         </div>
         <div>
-            <label for="deadline">締切日：</label>
-            <input type="date" id="deadline" name="deadline" th:field="*{deadline}" required>
+            <label class="a1" for="deadline">締切日：</label>
+            <input class="b1" type="date" id="deadline" name="deadline" th:field="*{deadline}" required>
         </div>
         <div>
-            <label for="place">場所：</label>
-            <input type="text" id="place" name="place" th:field="*{place}">
+            <label class="a1" for="place">場所：</label>
+            <input class="b1" type="text" id="place" name="place" th:field="*{place}">
         </div>
         <div>
-            <label for="memo">メモ：</label>
-            <input type="text" id="memo" name="memo" th:field="*{memo}">
+            <label class="a1" for="memo">メモ：</label>
+            <input class="b1" type="text" id="memo" name="memo" th:field="*{memo}">
         </div>
         <button type="submit">変更</button>
     </form>

@@ -10,10 +10,11 @@
     <div th:if="${param.register}" style="color:blue">
         登録に成功しました
     </div>
+    
     <form th:action="@{/login}" method="post">
         <div  class="username">
             <label for="username">ユーザ名：</label>
-            <input type="text" id="username" name="username" placeholder="ユーザ名（例 comcom）" required>    
+            <input type="text" id="uesrname" name="username" placeholder="ユーザ名（例 comcom）" required>    
         </div>
         <div>
             <label for="password">パスワード：</label>
@@ -21,7 +22,6 @@
         </div>
         <button type="submit">ログイン</button>
     </form>
-    
     <div th:replace="~{layout :: footer}"></div>
 </body>
 </html>

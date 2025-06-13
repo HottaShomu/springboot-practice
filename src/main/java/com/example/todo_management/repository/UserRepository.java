@@ -17,4 +17,9 @@ public class UserRepository {
         userMapper.insertUser(user);
     }
 
+    public String getUsername(String username){
+        return userMapper.getUsername(username);
+    }
+
+
 }

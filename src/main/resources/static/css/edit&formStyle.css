@@ -20,6 +20,10 @@ header button {
     transition: 0.3s;
 }
 
+h4 {
+    font-size: 40px;
+}
+
 button:hover {
     background-color: #a9a9a9;
     cursor:pointer;
@@ -28,6 +32,7 @@ button:hover {
 li {
     list-style-type: none;
     margin-top: 30px;
+    margin-right: 40px;
 }
 
 
@@ -88,4 +93,9 @@ footer {
     right: 0;
     bottom: 0;
     z-index: 200;
+}
+
+.got {
+    color: #000000;
+    text-decoration: none;
 }

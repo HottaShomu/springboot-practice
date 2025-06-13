@@ -1,5 +1,6 @@
 header {
     padding: 1px;
+    
 }
 
 h4 {
@@ -56,6 +57,7 @@ footer {
     right: 0;
     bottom: 0;
     margin-top: auto;
+    z-index: 200;
 }
 
 .got {

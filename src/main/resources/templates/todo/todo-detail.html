@@ -6,25 +6,25 @@
     <div th:replace="~{layout :: header}"></div>
     <h3>タスク詳細</h3>
     <table>
-        <tr class="task">
-            <th>タスク名：</th>
-            <td th:text="${todo.task}"></td>
+        <tr>
+            <th class="task">タスク名：</th>
+            <td class="taskDetail" th:text="${todo.task}"></td>
         </tr>
-        <tr class="category">
-            <th>カテゴリー：</th>
-            <td th:text="${todo.category}"></td>
+        <tr>
+            <th class="category">カテゴリー：</th>
+            <td class="categoryDetail" th:text="${todo.category}"></td>
         </tr>
-        <tr class="deadline">
-            <th>日付：</th>
-            <td th:text="${todo.deadline}"></td>
+        <tr>
+            <th class="deadline">日付：</th>
+            <td class="deadlineDetail" th:text="${todo.deadline}"></td>
         </tr>
-        <tr class="place">
-            <th>場所：</th>
-            <td th:text="${todo.place}"></td>
+        <tr>
+            <th class="place">場所：</th>
+            <td class="placeDetail" th:text="${todo.place}"></td>
         </tr>
-        <tr class="memo">
-            <th>メモ：</th>
-            <td th:text="${todo.memo}"></td>
+        <tr>
+            <th class="memo">メモ：</th>
+            <td class="memoDetail" th:text="${todo.memo}"></td>
         </tr>
     </table>
     <form th:action="@{/todos/{id}/edit(id=${todo.id})}" method="get">

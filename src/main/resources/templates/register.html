@@ -9,12 +9,12 @@
     <form th:action="@{/register}" th:object="${userForm}" method="post">
         <div>
             <label for="username">ユーザ名：</label>
-            <input type="text" id="username" name="username" th:field="*{username}" maxlength="10" placeholder="例）tarou" required>
+            <input type="text" id="username" name="username" th:field="*{username}" maxlength="10" placeholder="10文字以内" required>
         </div>
 
         <div>
             <label for="password">パスワード：</label>
-            <input type="password" id="password" name="password" th:field="*{password}" maxlength="12" placeholder="8文字以上12文字以下" required>
+            <input type="password" id="password" name="password" th:field="*{password}" minlength="8" maxlength="12" placeholder="8文字以上12文字以下" required>
         </div>
         <label for="namepass">※ユーザ名とパスワードは半角英大・小文字、数字使用可</label><br>    
         <button type="submit">登録</button>

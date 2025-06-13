@@ -2,7 +2,7 @@
 <html lang="ja" xmlns:th="http://www.thymeleaf.org">
     <link rel="stylesheet" th:href="@{/css/loginStyle.css}" />
 <head th:replace="~{layout :: head(ログイン)}"></head>
-<body>
+<body background="/img/torii.jpg">
     <div th:replace="~{layout :: header}"></div>
     <div th:if="${param.error}" style="color:red">
         ユーザ名、またはパスワードが違います

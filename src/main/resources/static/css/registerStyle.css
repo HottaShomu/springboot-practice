@@ -65,3 +65,8 @@ footer {
     bottom: 0;
     margin-top: auto;
 }
+
+.got {
+    color: #000000;
+    text-decoration: none;
+}

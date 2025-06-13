@@ -6,6 +6,10 @@ header {
     height: 100%;
 }
 
+h4 {
+    font-size: 40px;
+}
+
 li {
     list-style-type: none;
 }
@@ -14,6 +18,7 @@ body {
     text-align: center;
     width: 80%;
     height: 100%;
+    font-size: 20px;
 }
 
 table {
@@ -21,11 +26,33 @@ table {
     margin-right: auto;
 }
 
+.task {
+    position: relative;
+    left: 10px;
+}
+
+.deadline {
+    position: relative;
+    left: 30px;
+}
+
+.place {
+    position: relative;
+    left: 30px;
+}
+
+.memo {
+    position: relative;
+    left: 30px;
+}
+
 button {
     background-color: #FFFFFF;
     padding: 7px 15px 7px 15px;
+    margin-top: 4px;
     border: 1px solid #000000;
     border-radius: 10px;
+    font-size: 15px;
 }
 
 footer {

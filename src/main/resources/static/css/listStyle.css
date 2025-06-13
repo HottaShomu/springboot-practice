@@ -4,7 +4,6 @@ table {
     width: 60%;
     height: auto;
     font-size: 24px;
-    background-color: #d3d3d3;
     color: white;
 
     border-collapse: collapse;
@@ -17,13 +16,25 @@ tr,th,td {
     color: black;
 }
 
+thead th:not(:last-child) {
+    background-color: #d3d3d3;
+}
+
 td {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+tbody td {
+    background-color: #d3d3d3;
 }
 
 .tableButton {
     border: none;
+    background-color: transparent;
+}
+
+table:last-child{
     background-color: transparent;
 }
 

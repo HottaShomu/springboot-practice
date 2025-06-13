@@ -1,7 +1,9 @@
-loginStyle.css
-
 header {
     padding: 1px;
+}
+
+h4 {
+    font-size: 40px;
 }
 
 li {
@@ -14,11 +16,16 @@ body {
     min-height: 100vh;
     padding-bottom: 120px;
     box-sizing: border-box;
+    font-size: 20px;
 }
 
 .username {
     position: relative;
-    left: 8px;
+    left: 10px;
+}
+
+input {
+    padding: 5px;
 }
 
 div {
@@ -26,10 +33,12 @@ div {
 }
 
 button {
+    background-color: #FFFFFF;
     padding: 7px 15px 7px 15px;
     margin-top: 5px;
     border: 1px solid #000000;
     border-radius: 10px;
+    font-size: 15px;
 }
 
 footer {

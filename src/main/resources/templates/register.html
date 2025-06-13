@@ -3,6 +3,9 @@
 <head th:replace="~{layout :: head(ユーザ登録)}"></head>
 <body>
     <div th:replace="~{layout :: header}"></div>
+    <div>
+        <div th:if="${error}" th:text="${error}" style="color:red">sample message</div>
+    </div>
     <form th:action="@{/register}" th:object="${userForm}" method="post">
         <div>
             <label for="username">ユーザ名：</label>
@@ -13,10 +16,12 @@
             <label for="password">パスワード：</label>
             <input type="password" id="password" name="password" th:field="*{password}" maxlength="12" placeholder="8文字以上12文字以下" required>
         </div>
-        <label for="namepass">※ユーザ名とパスワードは半角英大・小文字、数字使用可</label><br>
+        <label for="namepass">※ユーザ名とパスワードは半角英大・小文字、数字使用可</label><br>    
         <button type="submit">登録</button>
     </form>
     <a href="login.html"><button type="submit">戻る</button></a>
     <div th:replace="~{layout :: footer}"></div>
+
+
 </body>
 </html>

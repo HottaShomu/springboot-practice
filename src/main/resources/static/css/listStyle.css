@@ -1,3 +1,15 @@
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+}
+
+li {
+    list-style-type: none;
+}
+
 table {
     margin: 0 auto;
     text-align: center;
@@ -16,17 +28,23 @@ tr,th,td {
     color: black;
 }
 
-thead th:not(:last-child) {
-    background-color: #d3d3d3;
-}
-
 td {
     padding-top: 8px;
     padding-bottom: 8px;
 }
 
-tbody td {
-    background-color: #d3d3d3;
+/* nth-last-child(-n+2) ... 最後から2番目までのすべての子要素 */
+tbody tr:nth-child(odd) td:not(:nth-last-child(-n+2)) {
+  background-color: #c3c3c3;
+}
+
+/* nth-last-child(-n+2) ... 最後から2番目までのすべての子要素 */
+tbody tr:nth-child(even) td:not(:nth-last-child(-n+2)){
+  background-color: #e1e1e1;
+}
+
+thead th:not(:last-child) {
+    background-color: #bfeffe;
 }
 
 .tableButton {
@@ -42,4 +60,33 @@ table:last-child{
     width: 100%;
     height: 200%;
     font-size: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.tableButton button:hover{
+    background-color: #a9a9a9;
+}
+
+.div-list{
+    position: relative;
+    left: 10%;
+    width: 90%;
+}
+
+.div-list h3 {
+    position: relative;
+    left: 15%;
+    width: 50%;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+i {
+    margin-left: 10px;
 }

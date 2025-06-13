@@ -7,34 +7,36 @@
 <body>
     <div th:replace="~{layout :: header}"></div>
     <div class="div-list">
-    <h3>完了タスク一覧<i class="fa-solid fa-circle-check"></i></h3>    
-        <table>
-            <thead>
-                <tr>
-                    <th>タスク</th>
-                    <th>締切日</th>
-                    <th>カテゴリー</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr th:each="todo : ${todos}" th:if="${todo.isTodoflag}">
-                    <td><a th:href="@{/todos/{id}(id=${todo.id})}"><span th:text="${todo.task}">task</span></a></td>
-                    <td><span th:text="${todo.deadline}">deadline</span></td>
-                    <td><span th:text="${todo.category}">category</span></td>
-                    <td class="tableButton">
-                        <form th:action="@{/todos/{id}/delete(id=${todo.id})}" method="post">
-                            <button type="submit">削除</button>
-                        </form>
-                    </td>
-                    <td class="tableButton">
-                        <form th:action="@{/todos/{id}/change2/true(id=${todo.id}, isTodoflag=${todo.isTodoflag})}" method="post">
-                            <button type="submit">戻す</button>
-                        </form>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <h3>完了タスク一覧<i class="fa-solid fa-circle-check"></i></h3>  
+        <div class="list-scroll">
+            <table>
+                <thead>
+                    <tr>
+                        <th>タスク</th>
+                        <th>締切日</th>
+                        <th>カテゴリー</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="todo : ${todos}" th:if="${todo.isTodoflag}">
+                        <td><a th:href="@{/todos/{id}(id=${todo.id})}"><span th:text="${todo.task}">task</span></a></td>
+                        <td><span th:text="${todo.deadline}">deadline</span></td>
+                        <td><span th:text="${todo.category}">category</span></td>
+                        <td class="tableButton">
+                            <form th:action="@{/todos/{id}/delete(id=${todo.id})}" method="post">
+                                <button type="submit">削除</button>
+                            </form>
+                        </td>
+                        <td class="tableButton">
+                            <form th:action="@{/todos/{id}/change2/true(id=${todo.id}, isTodoflag=${todo.isTodoflag})}" method="post">
+                                <button type="submit">戻す</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>  
     </div>
     
     <div th:replace="~{layout :: footer}"></div>

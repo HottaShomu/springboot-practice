@@ -8,77 +8,90 @@ header {
 
 body{
     text-align: center;
-    
-    
+  
 }
 
-/*
-.zzz{
-    position: relative;
-}
-    */
-/*
-.a1{
-   position: relative;
-   left: px;
-    
-}
-*/
 
 .a1{
    position: relative;
    right: 8px;
+   top: 12px;
     
 }
 
 .a2{
     position: relative;
     right: 24px;
+    top: 12px;
 }
 
 .a3{
     position: relative;
     right: 39px;
+    top: 12px;
 }
 
 .a4{
     position: relative;
     right: 0px;
+    top: 12px;
 }
 
 .a5{
     position: relative;
-    right: 0px;
+    left: 40px;
+    bottom: 69px;
 }
 
 
 .b1{
     position: relative;
     left: 0px;
+    top: 10px;
+    border-radius: 5px;
 }
 
 .b2{
     position: relative;
     right: 15px;
+    top: 10px;
+    border-radius: 5px;
 }
 
 .b3{
     position: relative;
     right: 30px;
+    top: 10px;
+    border-radius: 5px;
 }
 
 .b4{
     position: relative;
     left: 9px;
+    top: 10px;
+    border-radius: 5px;
 }
 
-.b5{
+.b5[type="text"]{
     position: relative;
-    left: 9px;
+    left: 49px;
+    top: 15px;
+    
+    width: 250px;
+    height: 100px;
+    resize: both; /* ユーザーがサイズを変更可能にする（必要に応じて） */
+    overflow-wrap: break-word; /* 長い単語を折り返す */
+    white-space: pre-wrap; /* 改行を保持しつつ折り返し */
+    padding: 2px; /* 内側の余白を設定 */
+    word-wrap: break-word; /* 必要に応じて単語を折り返す */
+    font-size: 16px; /* テキストのサイズを調整 */
+    /* border: 1px solid #ccc; /* 枠線を設定 */
+    border-radius: 5px; /* 角を丸くする */
+    box-sizing: border-box; /* パディングを含めたサイズ計算 */
 }
 
-/*
-form{
-    text-align: justify;
+.ttt{
+    position: relative;
+    left: 230px;
+    bottom: 10px;
 }
-    */

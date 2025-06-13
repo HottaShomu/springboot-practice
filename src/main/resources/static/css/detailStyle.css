@@ -56,12 +56,9 @@ td {
 }
 
 button {
-    background-color: #FFFFFF;
-    padding: 7px 15px 7px 15px;
-    margin-top: 4px;
-    border: 1px solid #000000;
-    border-radius: 10px;
     font-size: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
 }
 
 footer {

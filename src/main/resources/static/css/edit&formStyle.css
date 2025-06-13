@@ -51,9 +51,30 @@ body{
     right: 0px;
 }
 
+
 .b1{
     position: relative;
-    right: 0px;
+    left: 0px;
+}
+
+.b2{
+    position: relative;
+    right: 15px;
+}
+
+.b3{
+    position: relative;
+    right: 30px;
+}
+
+.b4{
+    position: relative;
+    left: 9px;
+}
+
+.b5{
+    position: relative;
+    left: 9px;
 }
 
 /*

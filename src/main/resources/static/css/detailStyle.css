@@ -26,24 +26,12 @@ table {
     margin-right: auto;
 }
 
-.task {
-    position: relative;
-    left: 10px;
+th {
+    text-align: right;
 }
 
-.deadline {
-    position: relative;
-    left: 30px;
-}
-
-.place {
-    position: relative;
-    left: 30px;
-}
-
-.memo {
-    position: relative;
-    left: 30px;
+td {
+    text-align: left;
 }
 
 button {

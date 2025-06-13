@@ -8,7 +8,7 @@
     <form th:action="@{/todos/new}" th:object="${todoForm}" method="post">
         <div>
             <label class="a1" for="task">タスク：</label>
-            <input class="b1" type="text" id="task" name="task" th:field="*{task}">
+            <input class="b1" type="text" id="task" name="task" th:field="*{task}" required>
         </div>
         <div>
             <label class="a2" for="category">カテゴリー：</label>
@@ -20,7 +20,7 @@
         </div>
         <div>
             <label class="a4" for="place">場所：</label>
-            <input class="b4" type="text" id="place" name="place" th:field="*{place}" required>
+            <input class="b4" type="text" id="place" name="place" th:field="*{place}">
         </div>
         <div>
             <label class="a5" for="memo">メモ：</label>

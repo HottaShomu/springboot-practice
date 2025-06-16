@@ -30,7 +30,7 @@
         </tr>
     </table>
     <form th:action="@{/todos/{id}/edit(id=${todo.id})}" method="get">
-        <button type="submit">編集</button>
+        <button class="editButton" type="submit">編集</button>
     </form>
     <div th:replace="~{layout :: footer}"></div>
 </body>

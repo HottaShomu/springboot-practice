@@ -35,12 +35,22 @@ li {
     margin-right: 40px;
 }
 
+i {
+    margin-left: 15px;
+}
+
 body {
-    text-align: center;
     width: 80%;
     height: 100%;
     font-size: 20px;
     margin: auto;
+}
+
+h3 {
+    position: relative;
+    left: 17.2%;
+    width: 50%;
+    font-size: 32px;
 }
 
 table {
@@ -56,10 +66,12 @@ td {
 }
 
 .editButton {
+    position: absolute;
+    right: 40%;
     font-size: 20px;
     border-radius: 10px;
     transition: 0.3s;
-    width: 90px;
+    width: 80px;
 }
 
 .editButton:hover {

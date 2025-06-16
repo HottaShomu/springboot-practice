@@ -14,8 +14,9 @@
         </div>
         <div class="ddd">
             <label for="category">カテゴリー：</label>
-            <select id="category" th:field="*{categorys}">
-                <option th:each="option : ${todoForm.categorys}" th:value="${option}" th:text="${option}"></option>
+            <select id="category" th:field="*{category}">
+                <option th:value="仕事">仕事</option>
+                <option th:value="プライベート">プライベート</option>
             </select>
         </div>
         <div class="eee">

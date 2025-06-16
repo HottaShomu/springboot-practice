@@ -41,8 +41,8 @@ public class TodoController {
     @GetMapping("/new")
     public String todoForm(Model model){
         TodoForm todoForm = new TodoForm();
-        List<String> options = Arrays.asList("仕事", "プライベート");
-        todoForm.setCategorys(options);
+        //List<String> options = Arrays.asList("仕事", "プライベート");
+        //todoForm.setCategorys(options);
         model.addAttribute("todoForm", todoForm);
 
         return "todo/todo-form";

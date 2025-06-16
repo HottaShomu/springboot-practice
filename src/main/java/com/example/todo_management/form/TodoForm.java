@@ -7,7 +7,7 @@ import java.util.List;
 @Data
 public class TodoForm{
     private String task;
-    private List<String> categorys;
+    private String category;
     private LocalDate deadline;
     private String place;
     private String memo;

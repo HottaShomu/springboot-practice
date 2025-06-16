@@ -11,7 +11,7 @@ import lombok.Data;
 public class Todo {
     private long id;
     private String task;
-    private List<String> categorys;
+    private String category;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate deadline;
     private String place;

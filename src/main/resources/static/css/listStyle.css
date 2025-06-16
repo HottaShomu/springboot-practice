@@ -24,6 +24,11 @@ button:hover {
     cursor:pointer;
 }
 
+.trashButton:hover {
+    background-color: #ff0000;
+    color: #ffffff;
+}
+
 h4 {
     font-size: 40px;
 }
@@ -134,10 +139,6 @@ table:last-child{
     overflow-y: auto;/* 隠れる部分はスクロールで表示 */
 }
 
-i {
-    margin-left: 15px;
-}
-
 footer {
     position: fixed;
     left: 0;
@@ -150,4 +151,14 @@ footer {
 .got {
     color: #000000;
     text-decoration: none;
+}
+
+h3 i{
+    margin-left: 15px;
+}
+
+.trashButton{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 6px;
 }

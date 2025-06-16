@@ -40,12 +40,20 @@ form{
     margin: 0 auto;
 }
 
-
-
 body{
     text-align: center;
     font-size: 20px;
-  
+}
+
+h3 {
+    position: relative;
+    left: 5.5%;
+    width: 50%;
+    font-size: 32px;
+}
+
+i {
+    margin-left: 15px;
 }
 
 .ddd{
@@ -83,13 +91,14 @@ body{
     padding: 10px;
 }
 
-
-
 .ttt{
     position: relative;
     left: 260px;
     top: 10px;
-    
+    font-size: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+    width: 80px;
 }
 
 footer {
@@ -97,7 +106,9 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
+    margin-top: auto;
     z-index: 200;
+    font-size: 16px;
 }
 
 .got {

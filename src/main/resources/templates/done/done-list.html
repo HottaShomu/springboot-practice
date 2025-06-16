@@ -7,7 +7,7 @@
 <body>
     <div th:replace="~{layout :: header}"></div>
     <div class="div-list">
-        <h3>完了タスク一覧<i class="fa-solid fa-circle-check"></i></h3>
+        <h3 class="functionTitle">完了タスク一覧<i class="fa-solid fa-circle-check"></i></h3>
         <div class="table-backcolor"></div>
         <div class="list-scroll">
             <table>
@@ -26,7 +26,8 @@
                         <td><span th:text="${todo.category}">category</span></td>
                         <td class="tableButton">
                             <form th:action="@{/todos/{id}/delete(id=${todo.id})}" method="post">
-                                <button type="submit">削除</button>
+                                <div>
+                                <button class="trashButton" type="submit"><i class="fa-solid fa-trash-can fa-lg"></i></button></div>
                             </form>
                         </td>
                         <td class="tableButton">

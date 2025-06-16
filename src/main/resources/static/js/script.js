@@ -1,16 +1,24 @@
+let isAscending =true; //初期状態は昇順
 function sortTable(columnIndex) {
-    const table = document.querySelector("table");
-    const rows = Array.from(table.rows).slice(1);
-    const isAscending = table.querySelectorAll("th")[columnIndex].classList.toggle("asc");
+    const table = document.querySelector('table');
+    const tbody = table.querySelector('tbody');
+    const rows = Array.from(tbody.querySelectorAll('tr'));
 
     rows.sort((a, b) => {
-        const aText = a.cells[columnIndex].innerText.trim();
-        const bText = b.cells[columnIndex].innerText.trim();
+        //cells[columIndex]は列を指定
+        let aText = a.cells[columnIndex].textContent;
+        let bText = b.cells[columnIndex].textContent;
 
-        return isAscending
-            ? aText.localeCompare(bText, 'ja')
-            : bText.localeCompare(aText, 'ja');
+        let aDate = new Date(aText);
+        let bDate = new Date(bText);
+        
+        //trueだったら昇順、falseだったら降順
+        if (isAscending) {
+            return aDate - bDate;
+        } else {
+            return bDate - aDate;
+        }
     });
-
-    rows.forEach(row => table.tBodies[0].appendChild(row));
+    rows.forEach(row => tbody.appendChild(row));
+    isAscending = !isAscending;
 }

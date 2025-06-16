@@ -53,6 +53,14 @@ tr,th,td {
     color: black;
 }
 
+.sortable {
+    cursor: pointer; /* ポインターを表示 */
+}
+
+.sortable:hover {
+    background-color: #bebefe39; /* 背景色を変更 */
+}
+
 td {
     padding-top: 8px;
     padding-bottom: 8px;

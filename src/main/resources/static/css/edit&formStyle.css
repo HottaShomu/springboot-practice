@@ -91,13 +91,14 @@ i {
     padding: 10px;
 }
 
-
-
 .ttt{
     position: relative;
     left: 260px;
     top: 10px;
-    
+    font-size: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+    width: 80px;
 }
 
 footer {

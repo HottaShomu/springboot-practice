@@ -14,7 +14,7 @@
                 <thead>
                     <tr>
                         <th>タスク</th>
-                        <th>締切日</th>
+                        <th class="sortable" onclick="sortTable(1)">締切日</th>
                         <th>カテゴリー</th>
                         <th></th>
                     </tr>
@@ -39,7 +39,7 @@
             </table>
         </div>  
     </div>
-    
+    <script src="/js/script.js"></script>
     <div th:replace="~{layout :: footer}"></div>
 </body>
 </html>

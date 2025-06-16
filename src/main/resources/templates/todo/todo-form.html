@@ -12,7 +12,9 @@
         </div>
         <div class="ddd">
             <label for="category">カテゴリー：</label>
-            <input type="text" id="category" name="category" th:field="*{category}" required>
+            <select id="category" th:field="*{categorys}">
+                <option th:each="option : ${todoForm.categorys}" th:value="${option}" th:text="${option}"></option>
+            </select>
         </div>
         <div class="eee">
             <label for="deadline">締切日：</label>

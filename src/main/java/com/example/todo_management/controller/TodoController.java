@@ -7,10 +7,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+
 import com.example.todo_management.form.TodoForm;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.lang.reflect.Array;
 import java.util.List;
+import java.util.Arrays;
 
 @Controller
 @RequestMapping("/todos")
@@ -38,7 +41,10 @@ public class TodoController {
     @GetMapping("/new")
     public String todoForm(Model model){
         TodoForm todoForm = new TodoForm();
+        List<String> options = Arrays.asList("仕事", "プライベート");
+        todoForm.setCategorys(options);
         model.addAttribute("todoForm", todoForm);
+
         return "todo/todo-form";
     }
 

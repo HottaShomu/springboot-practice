@@ -21,7 +21,7 @@ public class TodoService {
     public void createTodo(TodoForm todoForm){
         Todo todo = new Todo();
         todo.setTask(todoForm.getTask());
-        todo.setCategory(todoForm.getCategory());
+        todo.setCategorys(todoForm.getCategorys());
         todo.setDeadline(todoForm.getDeadline());
         todo.setPlace(todoForm.getPlace());
         todo.setMemo(todoForm.getMemo());

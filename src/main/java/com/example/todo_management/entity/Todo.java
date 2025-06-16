@@ -2,6 +2,7 @@ package com.example.todo_management.entity;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 
 import org.springframework.format.annotation.DateTimeFormat;
 import lombok.Data;
@@ -10,7 +11,7 @@ import lombok.Data;
 public class Todo {
     private long id;
     private String task;
-    private String category;
+    private List<String> categorys;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate deadline;
     private String place;

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja" xmlns:th="http://www.thymeleaf.org">
     <link rel="stylesheet" th:href="@{/css/edit&formStyle.css}" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <script th:src="@{/js/img.js}"></script>
 <head th:replace="~{layout :: head(タスク編集)}"></head>
 <body>
     <div th:replace="~{layout :: header}"></div>
-    <h3>タスク編集</h3>
+    <h3>タスク編集<i class="fa-solid fa-pen-to-square"></i></h3>
     <form th:action="@{/todos/{id}/edit(id=${todo.id})}" th:object="${todo}" method="post">
         <div class="ccc">
             <label for="task">タスク：</label>

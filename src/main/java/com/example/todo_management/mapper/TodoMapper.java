@@ -13,10 +13,11 @@ import java.util.List;
 @Mapper
 public interface TodoMapper {
 
-    @Select("SELECT * FROM todos")
-    List<Todo> selectAllTodos();
 
-    @Insert("INSERT INTO todos (task, deadline, category, place, memo) VALUES (#{task}, #{deadline}, #{category}, #{place}, #{memo})")
+    @Select("SELECT * FROM todos LEFT JOIN users ON todos.user_id = users.user_id WHERE todos.user_id = #{userId}")
+    List<Todo> selectAllTodos(long userId);
+
+    @Insert("INSERT INTO todos (task, deadline, category, place, memo,user_id) VALUES (#{task}, #{deadline}, #{category}, #{place}, #{memo},#{userId})")
     @Options(useGeneratedKeys = true, keyProperty = "id")
     void insertTodo(Todo todo);
 

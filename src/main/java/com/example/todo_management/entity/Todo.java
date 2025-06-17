@@ -2,7 +2,6 @@ package com.example.todo_management.entity;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.List;
 
 import org.springframework.format.annotation.DateTimeFormat;
 import lombok.Data;
@@ -18,5 +17,5 @@ public class Todo {
     private String memo;
     private LocalDateTime createdAt;
     private boolean isTodoflag;
-    
+    private long userId;
 }

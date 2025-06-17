@@ -2,6 +2,12 @@ package com.example.todo_management.controller;
 
 import com.example.todo_management.entity.Todo;
 import com.example.todo_management.service.TodoService;
+
+//new
+import com.example.todo_management.security.CustomUserDetails;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,9 +17,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.example.todo_management.form.TodoForm;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import java.lang.reflect.Array;
+
 import java.util.List;
-import java.util.Arrays;
+
 
 @Controller
 @RequestMapping("/todos")
@@ -25,15 +31,15 @@ public class TodoController {
     }
 
     @GetMapping
-    public String todos(Model model) {
-        List<Todo> todos = todoService.getAllTodos();
+    public String todos(Model model,@AuthenticationPrincipal CustomUserDetails userDetails) {
+        List<Todo> todos = todoService.getAllTodos(userDetails.getUserId());
         model.addAttribute("todos", todos);
         return "todo/todo-list";
     }
 
     @GetMapping("/Done")
-    public String Dones(Model model){
-        List<Todo> todos = todoService.getAllTodos();
+    public String Dones(Model model,@AuthenticationPrincipal CustomUserDetails userDetails){
+        List<Todo> todos = todoService.getAllTodos(userDetails.getUserId());
         model.addAttribute("todos", todos);
         return "done/done-list";
     }
@@ -49,8 +55,8 @@ public class TodoController {
     }
 
     @PostMapping("/new")
-    public String createTodo(TodoForm todoForm){
-        todoService.createTodo(todoForm);
+    public String createTodo(TodoForm todoForm,@AuthenticationPrincipal CustomUserDetails userDetails){
+        todoService.createTodo(todoForm,userDetails.getUserId());
 
         //List<Todo> todos = todoService.getAllTodos();
         //model.addAttribute("todos", todos);

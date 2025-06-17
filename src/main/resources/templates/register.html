@@ -19,7 +19,7 @@
         <label for="namepass">※パスワードは半角英大・小文字、数字使用可</label><br>    
         <button type="submit" class="RB">登録</button>
     </form>
-    <a href="login.html"><button type="submit" class="back">戻る</button></a>
+    <a th:href=@{/login}><button type="submit" class="back">戻る</button></a>
     <div th:replace="~{layout :: footer}"></div>
 </body>
 </html>

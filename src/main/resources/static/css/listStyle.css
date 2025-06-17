@@ -6,7 +6,7 @@ header {
     height: 100%;
     text-align: center;
     z-index: 100;
-    background-color: rgb(210, 233, 233);
+    background-color: #E6E6FA;
 }
 
 header button {
@@ -38,6 +38,13 @@ li {
     font-size: 20px;
     margin-top: 30px;
     margin-right: 40px;
+}
+
+body {
+    background-image: url(/img/background.png);
+    background-color: rgba(255, 255, 255, 0.296);
+    background-blend-mode: lighten;
+    overflow: hidden;
 }
 
 table {

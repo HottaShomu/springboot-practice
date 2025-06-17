@@ -14,17 +14,19 @@ public class TodoService {
         this.todoRepository = todoRepository;
     }
 
-    public List<Todo> getAllTodos(){
-        return todoRepository.getAllTodos();
+    public List<Todo> getAllTodos(long userId){
+        return todoRepository.getAllTodos(userId);
     }
 
-    public void createTodo(TodoForm todoForm){
+    public void createTodo(TodoForm todoForm,long userId){
         Todo todo = new Todo();
         todo.setTask(todoForm.getTask());
         todo.setCategory(todoForm.getCategory());
         todo.setDeadline(todoForm.getDeadline());
         todo.setPlace(todoForm.getPlace());
         todo.setMemo(todoForm.getMemo());
+        todo.setUserId(userId);
+        
         todoRepository.insertTodo(todo);
     }
 

@@ -7,7 +7,9 @@
 <body>
     <div th:fragment="header">
         <header>
-            <h4>時量師</h4>
+            <h4>
+                <ruby>刻守<rt>ときもり</rt></ruby>
+            </h4>
             <ul>
                 <li sec:authorize="isAuthenticated()"><a th:href="@{/todos}">タスク一覧</a></li>
                 <li sec:authorize="isAuthenticated()"><a th:href="@{/todos/Done}">完了タスク一覧</a></li>

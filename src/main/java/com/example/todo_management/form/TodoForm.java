@@ -7,6 +7,7 @@ import java.time.LocalTime;
 
 @Data
 public class TodoForm{
+    private String priority;
     private String task;
     private String category;
     private LocalDate deadline;
@@ -14,5 +15,4 @@ public class TodoForm{
     private LocalTime endTime;
     private String place;
     private String memo;
-
 }

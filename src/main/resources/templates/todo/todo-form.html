@@ -42,11 +42,11 @@
         </div>
         <div class="fff">
             <label for="place">場所：</label>
-            <input type="text" id="place" name="place" th:field="*{place}">
+            <input type="text" id="place" name="place" th:field="*{place}" maxlength="20">
         </div>
         <div>
             <label class="a5" for="memo">メモ：</label>
-            <textarea class="b5" type="text" id="memo" name="memo" th:field="*{memo}" rows="4" cols="50"></textarea>
+            <textarea class="b5" type="text" id="memo" name="memo" th:field="*{memo}" maxlength="200" rows="4" cols="50"></textarea>
         </div>
         <button class="ttt" type="submit">登録</button>
     </form>

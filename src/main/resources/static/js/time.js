@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if ((deadlineDate - currentDate) / (1000 * 60 * 60 * 24) <= 1) {
             deadlineElement.style.color = 'red';
         }else if((deadlineDate - currentDate) / (1000 * 60 * 60 * 24) <= 9){
-            deadlineElement.style.color = 'yellow'
+            deadlineElement.style.color = '#FFD700'
         }
     });
 });

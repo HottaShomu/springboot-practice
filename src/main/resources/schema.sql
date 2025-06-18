@@ -10,6 +10,8 @@ CREATE TABLE todos (
     task VARCHAR(255) NOT NULL,
     deadline DATE NOT NULL,
     category VARCHAR(255) NOT NULL,
+    start_time TIME,
+    end_time TIME,
     place VARCHAR(255),
     memo VARCHAR(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,

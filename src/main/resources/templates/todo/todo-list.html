@@ -15,7 +15,9 @@
                     <tr>
                         <th>タスク</th>
                         <th class="sortable" onclick="sortTable(1)">締切日</th>
+                        <th>開始時間</th>
                         <th>カテゴリー</th>
+                        <th></th>
                         <th></th>
                     </tr>
                 </thead>
@@ -23,6 +25,7 @@
                     <tr th:each="todo : ${todos}" th:unless="${todo.isTodoflag}">
                         <td><a th:href="@{/todos/{id}(id=${todo.id})}"><span th:text="${todo.task}">task</span></a></td>
                         <td><span th:text="${todo.deadline}">deadline</span></td>
+                        <td><span th:text="${todo.startTime}">startTime</span></td>
                         <td><span th:text="${todo.category}">category</span></td>
                         <td class="tableButton">
                             <form th:action="@{/todos/{id}/edit(id=${todo.id})}" method="get">

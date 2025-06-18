@@ -56,13 +56,15 @@ table {
     color: white;
 
     border-collapse: collapse;
-    border: 3px solid white;
 }
 
-tr,th,td {
-    border-collapse: collapse;
-    border: 3px solid white;
+th, td {
     color: black;
+}
+
+th:not(:nth-last-child(-n+2)),td:not(:nth-last-child(-n+2)) {
+    /* border-collapse: collapse; */
+    border: 3px solid white;
 }
 
 .sortable {
@@ -92,15 +94,17 @@ tbody tr:nth-child(even) td:not(:nth-last-child(-n+2)){
   background-color: #cdcdcd;
 }
 
-thead th:not(:last-child) {
+thead th {
     background-color: #bfeffe;
 }
 
 .table-backcolor {
     position: relative;
     top: 40px;
-    background-color: #ffffff;
-    height: 50px;
+    left: 19%;
+    background-color: #bfeffe;
+    height: 45px;
+    width: 61%;
     z-index: 2;
 }
 
@@ -142,7 +146,7 @@ table:last-child{
 
 .list-scroll {
     width: 100%;
-    height: 500px;
+    height: 450px;
     overflow-y: auto;/* 隠れる部分はスクロールで表示 */
 }
 

@@ -23,6 +23,8 @@ public class TodoService {
         todo.setTask(todoForm.getTask());
         todo.setCategory(todoForm.getCategory());
         todo.setDeadline(todoForm.getDeadline());
+        todo.setStartTime(todoForm.getStartTime());
+        todo.setEndTime(todoForm.getEndTime());
         todo.setPlace(todoForm.getPlace());
         todo.setMemo(todoForm.getMemo());
         todo.setUserId(userId);

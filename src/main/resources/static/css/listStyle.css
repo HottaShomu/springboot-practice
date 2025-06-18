@@ -48,13 +48,14 @@ body {
 }
 
 table {
+    position: relative;
+    left: 5%;
     margin: 0 auto;
     text-align: center;
-    width: 60%;
+    width: 70%;
     height: auto;
     font-size: 24px;
     color: white;
-
     border-collapse: collapse;
 }
 
@@ -62,7 +63,7 @@ th, td {
     color: black;
 }
 
-th:not(:nth-last-child(-n+2)),td:not(:nth-last-child(-n+2)) {
+th,td:not(:nth-last-child(-n+2)) {
     /* border-collapse: collapse; */
     border: 3px solid white;
 }
@@ -78,6 +79,10 @@ th:not(:nth-last-child(-n+2)),td:not(:nth-last-child(-n+2)) {
 td {
     padding-top: 8px;
     padding-bottom: 8px;
+    max-width: 250px;
+    white-space: nowrap; /* テキストを1行にする */
+    overflow: hidden;
+    text-overflow: ellipsis; /* はみ出した部分を「...」にする */
 }
 
 /* nth-last-child(-n+2) ... 最後から2番目までのすべての子要素 */
@@ -99,12 +104,12 @@ thead th {
 }
 
 .table-backcolor {
-    position: relative;
-    top: 40px;
+    position: absolute;
+    top: 14.5%;
     left: 19%;
     background-color: #bfeffe;
     height: 45px;
-    width: 61%;
+    width: 71%;
     z-index: 2;
 }
 

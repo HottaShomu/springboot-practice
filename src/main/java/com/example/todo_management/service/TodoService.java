@@ -28,6 +28,7 @@ public class TodoService {
         todo.setPlace(todoForm.getPlace());
         todo.setMemo(todoForm.getMemo());
         todo.setUserId(userId);
+        todo.setPriority(todoForm.getPriority());
         
         todoRepository.insertTodo(todo);
     }

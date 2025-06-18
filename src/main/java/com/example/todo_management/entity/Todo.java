@@ -10,6 +10,7 @@ import lombok.Data;
 @Data
 public class Todo {
     private long id;
+    private String priority;
     private String task;
     private String category;
     @DateTimeFormat(pattern = "yyyy-MM-dd")

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const deadlineElements = document.querySelectorAll('td:nth-child(2) > span');
+    const deadlineElements = document.querySelectorAll('td:nth-child(3) > span');
     const currentDate = new Date();
 
     deadlineElements.forEach(function(deadlineElement) {

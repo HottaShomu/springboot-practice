@@ -31,16 +31,22 @@
         </div>
         <div class="eee">
             <label for="deadline">締切日：</label>
-            <input type="date" id="deadline" name="deadline" th:field="*{deadline}" maxlength="30" required>
+            <input type="date" id="deadline" name="deadline" th:field="*{deadline}" th:min="${#dates.format(#dates.createNow(), 'yyyy-MM-dd')}" required>
         </div>
         <div class="ggg">
             <label for="startTime">開始時間：</label>
-            <input type="time" id="startTime" name="startTime" th:field="*{startTime}">
+            <input type="time" id="startTime" name="startTime" th:field="*{startTime}" onchange="updateEndTime()">
         </div>
         <div class="hhh">
             <label for="endTime">終了時間：</label>
             <input type="time" id="endTime" name="endTime" th:field="*{endTime}">
         </div>
+        <script>
+            function updateEndTime() {
+                const startTime = document.getElementById("startTime").value;
+                document.getElementById("endTime").setAttribute("min", startTime);
+            }
+        </script>
         <div class="fff">
             <label for="place">場所：</label>
             <input type="text" id="place" name="place" th:field="*{place}" maxlength="20">

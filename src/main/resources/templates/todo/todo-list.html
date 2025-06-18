@@ -27,6 +27,7 @@
                         <td th:if="${todo.priority == '高'}"><span th:text="${todo.priority}" style="color: red;">priority</span></td>
                         <td th:if="${todo.priority == '中'}"><span th:text="${todo.priority}" style="color: rgb(245, 157, 74);">priority</span></td>
                         <td th:if="${todo.priority == '低'}"><span th:text="${todo.priority}" style="color: blue;">priority</span></td>
+                        <td th:if="${todo.priority == ''}"><span th:text="${todo.priority}">priority</span></th>
                         <td><a th:href="@{/todos/{id}(id=${todo.id})}"><span th:text="${todo.task}">task</span></a></td>
                         <td><span th:text="${todo.deadline}">deadline</span></td>
                         <td><span th:text="${todo.startTime}">startTime</span></td>

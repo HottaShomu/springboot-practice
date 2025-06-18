@@ -13,14 +13,14 @@
             <label for="priority">優先度：</label>
             <select id="priority" th:field="*{priority}">
                 <option value="" selected>優先度を選択</option>
-                <option class="high" th:value="高" style="color: red;">高</option>
-                <option class="medium" th:value="中" style="color: orangered;">中</option>
-                <option class="low" th:value="低" style="color: blue;">低</option>
+                <option th:value="高" style="color: red;">高</option>
+                <option th:value="中" style="color: rgb(245, 157, 74);">中</option>
+                <option th:value="低" style="color: blue;">低</option>
             </select>
         </div>
         <div class="ccc">
             <label for="task">タスク：</label>
-            <input type="text" id="task" name="task" th:field="*{task}" required>
+            <input type="text" id="task" name="task" th:field="*{task}" maxlength="20" required>
         </div>
         <div class="ddd">
             <label for="category">カテゴリー：</label>

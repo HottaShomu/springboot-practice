@@ -4,4 +4,5 @@ INSERT INTO users (username, password) VALUES
 
 INSERT INTO todos (task, deadline, category, start_time, end_time, place, memo, isTodoflag,user_id) VALUES
 ('メールの返信','2023-12-31', '仕事', '12:00' , '14:00', '横浜オフィス', '15:00までに返信', TRUE, 1),
-('健康診断の予約','2024-1-1', 'プライベート', '12:00' , '14:00', '東京オフィス', '15:00までに返信', FALSE, 2);
+('健康診断の予約','2024-1-1', 'プライベート', '12:00' , '14:00', '東京オフィス', '15:00までに返信', FALSE, 2),
+('資料作成','2025-12-31', '仕事', '13:00' , '15:00', '仙台オフィス', '', FALSE, 1);

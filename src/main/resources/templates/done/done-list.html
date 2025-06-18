@@ -13,6 +13,8 @@
             <table>
                 <thead>
                     <tr>
+                    </tr>
+                        <th>優先度</th>
                         <th>タスク</th>
                         <th class="sortable" onclick="sortTable(1)">締切日</th>
                         <th>開始時間</th>
@@ -23,6 +25,7 @@
                 </thead>
                 <tbody>
                     <tr th:each="todo : ${todos}" th:if="${todo.isTodoflag}">
+                        <td><span th:text="${todo.priority}">priority</span></td>
                         <td><a th:href="@{/todos/{id}(id=${todo.id})}"><span th:text="${todo.task}">task</span></a></td>
                         <td><span th:text="${todo.deadline}">deadline</span></td>
                         <td><span th:text="${todo.startTime}">startTime</span></td>

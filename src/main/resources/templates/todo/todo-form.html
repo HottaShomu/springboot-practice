@@ -8,9 +8,18 @@
     <div th:replace="~{layout :: header}"></div>
     <h3>タスク登録<i class="fa-solid fa-file-signature"></i></h3>
     <form th:action="@{/todos/new}" th:object="${todoForm}" method="post">
+        <div class="bbb">
+            <label for="priority">優先度：</label>
+            <select id="priority" th:field="*{priority}">
+                <option value="" selected>優先度を選択</option>
+                <option th:value="高">高</option>
+                <option th:value="中">中</option>
+                <option th:value="小">小</option>
+            </select>
+        </div>
         <div class="ccc">
             <label for="task">タスク：</label>
-            <input type="text" id="task" name="task" th:field="*{task}" required>
+            <input type="text" id="task" name="task" th:field="*{task}" maxlength="30" required>
         </div>
         <div class="ddd">
             <label for="category">カテゴリー：</label>

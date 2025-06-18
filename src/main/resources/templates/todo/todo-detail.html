@@ -9,6 +9,10 @@
     <h3>タスク詳細<i class="fa-solid fa-file-invoice"></i></h3>
     <table>
         <tr>
+            <th class="priority">優先度：</th>
+            <td class="priorityDetail" th:text="${todo.priority}"></td>
+        </tr>
+        <tr>
             <th class="task">タスク名：</th>
             <td class="taskDetail" th:text="${todo.task}"></td>
         </tr>

@@ -7,6 +7,7 @@ CREATE TABLE users (
 
 CREATE TABLE todos (
     id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    priority VARCHAR(10),
     task VARCHAR(255) NOT NULL,
     deadline DATE NOT NULL,
     category VARCHAR(255) NOT NULL,
@@ -16,6 +17,6 @@ CREATE TABLE todos (
     memo VARCHAR(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     isTodoflag BOOLEAN DEFAULT FALSE,
-    user_id INTEGER NOT NULL,
+    user_id INTEGER NOT NULL, 
     FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
 );

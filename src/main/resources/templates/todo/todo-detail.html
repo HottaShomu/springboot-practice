@@ -13,7 +13,7 @@
             <td class="priorityDetail" th:if="${todo.priority == '高'}" th:text="${todo.priority}" style="color: red;"></td>
             <td class="priorityDetail" th:if="${todo.priority == '中'}" th:text="${todo.priority}" style="color: rgb(245, 157, 74);"></td>
             <td class="priorityDetail" th:if="${todo.priority == '低'}" th:text="${todo.priority}" style="color: blue;"></td>
-            <td class="priorityDetail" th:text="${todo.priority}"></td>
+            <td class="priorityDetail" th:if="${todo.priority == ''}" th:text="${todo.priority}"></td>
         </tr>
         <tr>
             <th class="task">タスク名：</th>

@@ -19,8 +19,8 @@
                         <th class="sortable" onclick="sortTable(2)">日付</th>
                         <th>開始時間</th>
                         <th>カテゴリー</th>
-                        <th></th>
-                        <th></th>
+                        <th>削除</th>
+                        <th>復元</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -41,7 +41,7 @@
                         </td>
                         <td class="tableButton">
                             <form th:action="@{/todos/{id}/change2/true(id=${todo.id}, isTodoflag=${todo.isTodoflag})}" method="post">
-                                <button type="submit">戻す</button>
+                                <button type="submit"><i class="fa-solid fa-reply"></i></button>
                             </form>
                         </td>
                     </tr>

@@ -176,6 +176,10 @@ h3 i{
     margin-left: 15px;
 }
 
+button i{
+    font-size: 150%;
+}
+
 .trashButton{
     padding-left: 15px;
     padding-right: 15px;

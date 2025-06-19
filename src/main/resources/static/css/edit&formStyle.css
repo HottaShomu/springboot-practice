@@ -64,44 +64,47 @@ i {
 
 .bbb{
     position: relative;
-    right: 34px;
+    right: 60px;
+}
+
+.ccc{
+    position: relative;
+    left: 3.5px;
 }
 
 .ddd{
     position: relative;
-    right: 54px;
+    right: 80px;
 }
 
 .eee{
     position: relative;
-    right: 31px;
+    right: 53px;
 }
 
 .fff{
     position: relative;
-    left: 9px;
+    left: 14px;
 }
 
 .ggg{
     position: relative;
-    right: 60px;
+    right: 100px;
 }
 
 .hhh{
     position: relative;
-    right: 60px;
+    right: 100px;
 }
 
 .a5{
     position: relative;
-    left: 60px;
     bottom: 88px;
 }
 
 
 .b5[type="text"]{
     position: relative;
-    left: 58px;
     top: 15px;
     
     width: 250px;
@@ -119,6 +122,22 @@ i {
     border-radius: 10px;
     transition: 0.3s;
     width: 80px;
+}
+
+input {
+    font-size: 120%;
+    width: auto;
+    margin-top: 0.5%;
+}
+
+select {
+    font-size: 120%;
+    width: 19%;
+    margin-top: 0.5%;
+}
+
+textarea {
+    font-size: 120%;
 }
 
 footer {
